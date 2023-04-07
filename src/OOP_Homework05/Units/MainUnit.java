@@ -62,7 +62,7 @@ public abstract class MainUnit implements UnitsInterface {
     }
 
     public Position getPosition() {
-        return position;
+        return this.position;
     }
 
 
