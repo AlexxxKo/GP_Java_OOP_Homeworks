@@ -32,8 +32,8 @@ public class ConsoleView {
             for (int j = 1; j <= Main.TEAM_SIZE; j++) {
                 System.out.print(getChar(new Position(j, i)));
             }
-            System.out.print("|\n");
-//            System.out.println(PrintInfo(npcIndex));
+            System.out.print("|");
+            System.out.println(PrintInfo(npcIndex));
             System.out.println(ConsoleView.mid10);
             npcIndex++;
         }
@@ -41,8 +41,8 @@ public class ConsoleView {
         for (int j = 1; j <= Main.TEAM_SIZE; j++) {
             System.out.print(getChar(new Position(j, Main.TEAM_SIZE)));
         }
-        System.out.print("|\n");
-//        System.out.println(PrintInfo(npcIndex));
+        System.out.print("|");
+        System.out.println(PrintInfo(npcIndex));
         System.out.println(ConsoleView.bottom10);
     }
     private static String getChar(Position position){
@@ -68,19 +68,19 @@ public class ConsoleView {
         }
         return str;
     }
-//    private static String PrintInfo(int npcIndex)
-//    {
-//        String str = "";
-//
-//        if(Main.team1.get(npcIndex).getCurrentHp() == 0)
-//            str +="     " + AnsiColors.ANSI_RED+Main.team1.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
-//        else str +="     " + AnsiColors.ANSI_GREEN+Main.team1.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
-//        if(Main.team2.get(npcIndex).getCurrentHp() == 0)
-//            str +="     " + AnsiColors.ANSI_RED+Main.team2.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
-//        else str +="     " + AnsiColors.ANSI_BLUE+Main.team2.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
-//
-//        return str;
-//    }
+    private static String PrintInfo(int npcIndex)
+    {
+        String str = "";
+
+        if(Main.team1.get(npcIndex).getCurrentHp() == 0)
+            str +="     " + AnsiColors.ANSI_RED+Main.team1.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
+        else str +="     " + AnsiColors.ANSI_GREEN+Main.team1.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
+        if(Main.team2.get(npcIndex).getCurrentHp() == 0)
+            str +="     " + AnsiColors.ANSI_RED+Main.team2.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
+        else str +="     " + AnsiColors.ANSI_BLUE+Main.team2.get(npcIndex).getInfo()+AnsiColors.ANSI_RESET;
+
+        return str;
+    }
     private static String formatDiv(String str){
         return str.replace('a', '\u250c')
                 .replace('b', '\u252c')
